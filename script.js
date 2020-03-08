@@ -8,4 +8,4 @@ let person = {
 let arr = ['kek','lpl','ere'];
 // console.log(arr[0]);
 // confirm('Are u married?');
-//prompt()
+//prompt(gi
