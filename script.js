@@ -66,5 +66,26 @@ let appData = {
             appData.optionalExpenses[i] = chooseOptExpenses;
             i++;
         }
+    },
+    chooseIncome: function () {
+
+        let items = prompt("Перечислите доп доход через запятую", "");
+
+        if (typeof(items) != "string" || items == "" || typeof(items) == null) {
+            console.log("Так не пойдет");
+        } else {
+            appData.income = items.split(", ");
+            appData.income.push(prompt("Может что то еще?"));
+            appData.income.sort();
+        }
+
+        appData.income.forEach (function (itemmassive, i) {
+            alert("А вот и данные: " + (i+1) + " - " + itemmassive);
+        });
+
     }
 };
+
+for (let key in appData) {
+    console.log("А вот и свойства: " + key + " - " + appData[key]);
+}
